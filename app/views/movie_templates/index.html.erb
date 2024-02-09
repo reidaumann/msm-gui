@@ -4,27 +4,40 @@
 
 <hr>
 
-<form action="">
+<form action="/insert_movie_record" method="post">
+  <div>
   <label for="title_field">Title</label>
-  <input id="title_field" type="text">
+  <input id="title_field" type="text" name="the_title">
+  </div>
 
-  <label for="title_field">Title</label>
-  <input id="title_field" type="text">
+  <div>
+  <label for="year_field">Year</label>
+  <input id="year_field" type="text" name="the_year">
+  </div>
 
-  <label for="title_field">Year</label>
-  <input id="title_field" type="text">
+  <div>
+  <label for="dur_field">Duration</label>
+  <input id="dur_field" type="text" name="the_dur">
+  </div>
 
-  <label for="title_field">Duration</label>
-  <input id="title_field" type="text">
+  <div>
+  <label for="desc_field">Description</label>
+  <input id="desc_field" type="text" name="the_desc">
+  </div>
 
-  <label for="title_field">Description</label>
-  <input id="title_field" type="text">
+  <div>
+  <label for="img_field">Image</label>
+  <input id="img_field" type="text" name="the_img">
+  </div>
 
-  <label for="title_field">Image</label>
-  <input id="title_field" type="text">
+  <div>
+  <label for="dir_id_field">Director ID</label>
+  <input id="dir_id_field" type="text" name="the_dir_id">
+  </div>
 
-  <label for="title_field">Director ID</label>
-  <input id="title_field" type="text">
+  <button type="submit">
+    Create movie
+  </button>
 </form>
 
 <table border="1">
@@ -76,7 +89,11 @@
       
       <% the_director = matching_directors.at(0) %>
 
-      <%= the_director.name %>
+      <% if the_director==nil%>
+          Uh oh! We weren't able to find a director for this movie.
+      <% else%>
+          <%=the_director.name%>
+      <% end%>
     </td>
 
     <td>
