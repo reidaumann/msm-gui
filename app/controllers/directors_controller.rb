@@ -43,7 +43,6 @@ class DirectorsController < ApplicationController
     d.dob=params.fetch("the_dob")
     d.bio=params.fetch("the_bio")
     d.image=params.fetch("the_image")
-    d.id=params.fetch("the_dir_id")
 
     d.save
     
@@ -68,7 +67,6 @@ class DirectorsController < ApplicationController
     the_director.dob=params.fetch("the_dob")
     the_director.bio=params.fetch("the_bio")
     the_director.image=params.fetch("the_image")
-    the_director.id=params.fetch("the_dir_id")
 
     the_director.save
 

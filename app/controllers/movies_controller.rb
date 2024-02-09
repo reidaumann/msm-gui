@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
     m.year=params.fetch("the_year")
     m.duration=params.fetch("the_dur")
     m.description=params.fetch("the_desc")
-    m.image=params.fetch("the_image")
+    m.image=params.fetch("the_img")
     m.director_id=params.fetch("the_dir_id")
 
     m.save
